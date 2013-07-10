@@ -7,7 +7,7 @@
  */
 $(document).ready(function () {
 // Handler for .ready() called.
-    $('#submit').click(function () {
+    $('#submit').tap(function () {
         alert("clicked");
 
         var person = new Object();
