@@ -7,6 +7,7 @@
  */
 $(document).ready(function () {
 // Handler for .ready() called.
+    alert("jquery ");
     $('#submit').tap(function () {
         alert("clicked");
 
