@@ -8,7 +8,7 @@
 $(document).ready(function () {
 // Handler for .ready() called.
     $('#submit').click(function () {
-        // alert("clicked");
+        alert("clicked");
 
         var person = new Object();
         person.firstName = $('#firstName').val();
