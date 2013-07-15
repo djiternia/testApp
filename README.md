@@ -1,2 +1,4 @@
-testApp
-=======
+appTesting
+==========
+
+Simple Ajax Testing for mobile

@@ -1,44 +1,39 @@
-/**
- * Created with JetBrains WebStorm.
- * User: iternia
- * Date: 7/9/13
- * Time: 12:08 PM
- * To change this template use File | Settings | File Templates.
- */
-$(document).ready(function () {
-// Handler for .ready() called.
-    alert("jquery ");
-    /*    $('#submit').tap(function () {
-     alert("clicked");
+require.config({
+    paths: {
+        jquery: 'libs/jquery',
+        underscore: 'libs/underscore-min',
+        backbone: 'libs/backbone-min',
+        text: 'libs/text',
+        spin: 'plugin/spin',
+        templates: 'templates'
 
-     var person = new Object();
-     person.firstName = $('#firstName').val();
-     person.lastName = $('#lastName').val();
-
-     //alert(person);
-
-     var jsonPerson = JSON.stringify(person);
-
-     // alert(jsonPerson);
-     console.log(jsonPerson);
-
-     $.ajax({
-     url: "http://server1.iternia.com:9090/iterniaapp/api/addperson",
-     method: 'POST',
-     data: jsonPerson,
-     dataType: 'json',
-     contentType: "application/json"
+        // Application Folders
+        /*"collections": "collections",
+         "models": "models",
+         "templates": "templates",
+         "views": "views"*/
+    },
+    shim: {
+        "underscore": {
+            exports: "_"
+        },
+        backbone: {
+            deps: ["jquery", "underscore"],
+            exports: "Backbone"
+        }
+    }
+});
 
 
-     }).done(function (data) {
-     // alert("send"+data);
-     console.log(data);
-     //var responseObj = $.parseJSON(data);
-     //alert(data);
-     $('#showFirstName').html("First Name :- " + data.firstName);
-     $('#showLastName').html("Last Name :- " + data.lastName);
-     });
+window.App = {
+    Models: {},
+    Collections: {},
+    Views: {},
+    Routers: {}
+}
+require([ 'jquery', 'backbone', 'router'], function ($, Backbone, AppRouter) {
+    $(document).ready(function () {
+        App.Router = new AppRouter();
 
-     });
-     */
+    });
 });

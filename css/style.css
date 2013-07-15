@@ -1,0 +1,31 @@
+﻿#headerWrapper ul li {
+    float: left;
+    width: 100px;
+    height: 30px;
+    font: 12px;
+    color: yellow;
+
+}
+
+#headerWrapper ul li.active {
+    color: red;
+}
+
+#leftWrap {
+    float: left;
+    width: 300px;
+    border: 1px solid red;
+    min-height: 300px;
+}
+
+#rightWrap {
+    float: left;
+    width: 600px;
+    border: 1px solid red;
+    margin-left: 20px;
+    min-height: 300px;
+}
+
+input {
+    border: 1px solid #000000 !important;
+}
